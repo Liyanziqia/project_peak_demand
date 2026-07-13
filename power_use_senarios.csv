@@ -1,0 +1,4 @@
+Scenario Name,Data Center Capacity Factor,Avg Monthly Home Usage (kWh),Data Center Annual kWh,Home Annual kWh,Equivalent NY Homes
+The Operational Baseline,1.0,571,8760000000.0,6852,1278459
+The Downtime Shift,0.85,571,7446000000.0,6852,1086690
+The Peak Heatwave Shift,1.0,800,8760000000.0,9600,912500
