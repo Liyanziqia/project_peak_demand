@@ -67,7 +67,7 @@ Jupyter Notebook
 
 # AI use note
 
-I used AI to help design the very basic html template, as well as debugging the codes back and forth. 
+I used AI to help debug the codes back and forth, especially when building the basic html template, my first webpage design. 
 
 
 # Questions or corrections
