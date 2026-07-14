@@ -31,7 +31,8 @@ To put the scale of the proposal itself in context: at full capacity, a 1 GW fac
 Notebooks: I used several jupyter notebooks for this project:
 1. Scraping_youtube: to fetch transcripts
 2. Power_center: the original notebook I started with before I realized that the New York state power rates I calculated are not really comparable to the local rates
-3. Power_center_CORRECTED: this is the main notebook that I used throughout the project to document the learning process. I had to re-work on entire section about power rates but I kept both notebooks to remember the mistake.
+3. Power_center_CORRECTED: this is the MAIN notebook that I used throughout the project to document the learning process. I had to re-work on entire section about power rates but I kept both notebooks to remember the mistake. 
+(*Note: updated chart title and annotation, saved in a seperate notebook: Power_center_CORRECTED_ChartUpdated)
 4. ego_cloud_phrases: our nice TA helped me get a headstart with a text analysis to generate a word cloud image. She walked me through the process, which I really appreciate. 
 Other files: CSV files: all the dfs I saved, including the raw transcripts and power rates. Images: the word cloud image and the line chart. Eventually, the html file, which I included a D3 animation practice 
 
