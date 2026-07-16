@@ -47,7 +47,7 @@ Step 3, Clean: I spent a lot of time on updating the stop words, or words that d
 
 Step 4, Analyze: I ran keyword frequency counts and co-occurrence analysis (including negation phrases like "don't want" and "cannot afford") to trace how concern about the proposal built up across the four meetings, then manually verified the strongest quotes against the original video before using them. For sanity check, I manually checked some of the examples of the quotes. 
 
-Step 5, Visualize: I built a word cloud (highlighting "moratorium" against a muted palette) and a rate-history line chart from the verified data, plus an animated stat callout using D3 to show the 1.3-million-household comparison. (super cool!)
+Step 5, Visualize: I built a word cloud (highlighting "moratorium" against a muted palette) and a rate-history line chart from the verified data, plus an animated stat callout using D3 to show the 1.3-million-household comparison. (Would be super cool if it worked.  I realize, thanks to the instructor's help, that I need to have the animation attached to the scroll position, so that it loads when that box appears on screen for users. Still trying to debug! )
 
 Step 6, Story: I built the piece as a plain long-form HTML page rather than a heavily designed template, to keep the focus on the reporting rather than the visual design. I wanted to keep it clean. 
 
