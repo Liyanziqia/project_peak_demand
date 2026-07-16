@@ -7,7 +7,7 @@ Data center pushback is spreading nationwide, from statehouses to town halls. It
 
 Read the story here: https://liyanziqia.github.io/project_peak_demand/
 
-# Question:  A quick eyeballing of social media posts and local media reports indicated concerns over rising power bills and strained resources. Is that the case, or local residents have other concerns? 
+# Question:  Social media posts and local media reports indicated concerns over rising power bills and strained resources. Is that the case, or local residents have other concerns? 
 
 
 # The data
@@ -39,7 +39,7 @@ Other files: CSV files: all the dfs I saved, including the raw transcripts and p
 
 # How I worked
 
-Step 1, Identify: I built a timeline of the East Fishkill proposal from local news coverage, to establish which four Town Board meetings  actually discussed it, before scraping anything.
+Step 1, Identify: I built a timeline of the East Fishkill proposal based on local news coverage, to establish which Town Board meetings  actually discussed it, before scraping anything.
 
 Step 2, Fetch: I pulled transcripts for those four meetings via YouTube's transcript API (no video downloads required), and Central Hudson's residential rate history directly from the utility's own published PDF.
 
