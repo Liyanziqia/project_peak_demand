@@ -161,8 +161,15 @@ This year, following another rate increase, according to the local utility, an a
 <!-- * section heading -->
 <h2>What 1 GW Means</h2>
 
-<!-- TA note:: The duplicate head and body tags were removed here. -->
+<!-- CHANGED: switched from a CodePen iframe embed to a direct SVG
+     file embed -- this is more reliable since it doesn't depend on
+     CodePen loading correctly inside an iframe-->
+
+
+
+</head>
 <script src="https://d3js.org/d3.v7.min.js"></script>
+<body>
 <div id="power-scenario-viz" style="max-width:760px; margin:20px auto; background:white; padding:35px; border-radius:12px; box-sizing:border-box;">
 
   <p id="statNumberEF" style="text-align:center; font-size:64px; font-weight:800; color:#d1495b; margin:10px 0 14px 0; line-height:1;">0</p>
@@ -185,60 +192,24 @@ This year, following another rate increase, according to the local utility, an a
 (function () {
   const targetValue = 1300000;
 
-  // TA note:: This is the section that starts the counter.
-  const counterSection = document.querySelector("#power-scenario-viz");
-
   // Scoped to this specific element's ID, so it can't accidentally
   // grab some other number elsewhere on the page
   const numberEl = d3.select("#statNumberEF");
 
-  // TA note:: This remembers if the counter already started.
-  let hasStarted = false;
-
-  // TA note:: Start the counter only once.
-  function startCounter() {
-    if (hasStarted) return;
-    hasStarted = true;
-
-    numberEl
-      .transition()
-      .duration(1800)
-      .ease(d3.easeCubicOut)
-      .tween("text", function () {
-        const interpolator = d3.interpolateNumber(0, targetValue);
-
-        return function (t) {
-          this.textContent = d3.format(",")(
-            Math.round(interpolator(t))
-          );
-        };
-      })
-      .on("end", function () {
-        // TA note:: Once the count-up finishes, swap to the word format.
-        d3.select(this).text("1.3 million");
-      });
-  }
-
-  // TA note:: Watch for the counter section to appear on screen.
-  const observer = new IntersectionObserver(
-    function (entries) {
-      const sectionIsVisible = entries[0].isIntersecting;
-
-      if (sectionIsVisible) {
-        startCounter();
-
-        // TA note:: Stop watching after the counter starts.
-        observer.disconnect();
-      }
-    },
-    {
-      // TA note:: Start when 25% of the section is visible.
-      threshold: 0.25
-    }
-  );
-
-  // TA note:: Begin watching the counter section.
-  observer.observe(counterSection);
+  numberEl
+    .transition()
+    .duration(1800)
+    .ease(d3.easeCubicOut)
+    .tween("text", function () {
+      const interpolator = d3.interpolateNumber(0, targetValue);
+      return function (t) {
+        this.textContent = d3.format(",")(Math.round(interpolator(t)));
+      };
+    })
+    .on("end", function () {
+      // Once the count-up finishes, swap to the word format
+      d3.select(this).text("1.3 million");
+    });
 })();
 </script>
 <!-- * caption for the chart -->
@@ -273,6 +244,6 @@ No New York state average power rates could be found that were strictly comparab
  <p style="font-size: 0.85em; color: #555; margin-top: 30px; text-align: center;"> View the code for this project on GitHub <a href="https://github.com/Liyanziqia/project_peak_demand/blob/main/index.html">here</a>.</p>
 
  <!-- ADDED: copyright line -->
-<p style="font-size: 0.8em; color: #777; margin-top: 10px; text-align: center;">&copy; 2026 Liyan Qi </p>
+<p style="font-size: 0.8em; color: #777; margin-top: 10px; text-align: center;">&copy; 2026 Liyan Qi. </p>
 </body>
 </html>
